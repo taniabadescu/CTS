@@ -7,6 +7,7 @@ import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.clase.UniversalReader;
 import ro.ase.cts.clase.readers.EmployeeReader;
+import ro.ase.cts.clase.readers.PupilReader;
 
 public class Program {
 
@@ -14,7 +15,9 @@ public class Program {
 		List<Aplicant> listaAplicanti;
 		try {
 			
-			listaAplicanti =EmployeeReader.readAngajati("angajati.txt");
+	
+			listaAplicanti = UniversalReader.readAplicants(new PupilReader("elevi.txt"));
+			
 			for(Aplicant aplicant:listaAplicanti)
 				System.out.println(aplicant.toString());
 		} catch (FileNotFoundException e) {
@@ -22,5 +25,4 @@ public class Program {
 			e.printStackTrace();
 		}
 	}
-
 }

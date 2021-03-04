@@ -13,12 +13,14 @@ import ro.ase.cts.clase.Elev;
 import ro.ase.cts.clase.Student;
 import ro.ase.cts.clase.UniversalReader;
 
-public class PupilReader {
+public class PupilReader extends Reader {
 
+	public PupilReader(String fileName){
+		super(fileName);
+	}
 	
-	
-	public static List<Aplicant> readPupil(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+	public List<Aplicant> readAplicants() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.fileName));
 		input2.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<Aplicant>();
 
@@ -40,5 +42,7 @@ public class PupilReader {
 		input2.close();
 		return elevi;
 	}
+
+
 }
 

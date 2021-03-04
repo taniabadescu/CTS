@@ -13,11 +13,13 @@ import ro.ase.cts.clase.Elev;
 import ro.ase.cts.clase.Student;
 import ro.ase.cts.clase.UniversalReader;
 
-public class EmployeeReader {
+public class EmployeeReader extends Reader {
 	
-	
-	public static List<Aplicant> readAngajati(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+	public EmployeeReader(String fileName){
+		super(fileName);
+	}
+	public List<Aplicant> readAplicants() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.fileName));
 		input2.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<Aplicant>();
 
