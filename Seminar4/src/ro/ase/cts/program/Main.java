@@ -1,5 +1,6 @@
 package ro.ase.cts.program;
 
+import ro.ase.cts.clase.Fotbalist;
 import ro.ase.cts.clase.ManagerSpital;
 import ro.ase.cts.clase.ManagerSpitalLazy;
 
@@ -20,6 +21,17 @@ public class Main {
 		
 		System.out.println(m3.toString());
 		System.out.println(m4.toString());
+		
+		
+		Fotbalist f1= Fotbalist.getInstance("Marian", 21, (float)1.8);
+		Fotbalist f2= Fotbalist.getInstance("Tom", 20, (float)1.81);
+		
+		f1.setVarsta(22);
+		f2.setInaltime((float)1.78);
+		 
+		System.out.println(f1.toString());
+		System.out.println(f2.toString());
+		
 	}
 
 }
