@@ -1,6 +1,6 @@
 package ro.ase.cts.builder.clase;
 
-public class RezervareBuilder implements BuiderAbstract{
+public class RezervareBuilder implements BuilderAbstract{
 
 	private Rezervare rezervare;
 	

@@ -1,6 +1,6 @@
 package ro.ase.cts.builder.clase;
 
-public interface BuiderAbstract {
+public interface BuilderAbstract {
 	public Rezervare build();
 
 }
