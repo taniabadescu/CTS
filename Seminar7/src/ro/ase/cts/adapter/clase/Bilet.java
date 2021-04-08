@@ -8,6 +8,7 @@ public class Bilet {
 		this.pret = pret;
 	}
 	
+
 	public void rezerva()
 	{
 		System.out.println("A fost rezervat biletul cu pretul: "+ pret);
