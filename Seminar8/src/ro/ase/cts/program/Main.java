@@ -29,6 +29,13 @@ public class Main {
 		
 		meniu.afiseazaInformatii();
 		
+       System.out.println("-----------------------------");
+		
+		sectiuneBauturi.stergeNod(frappe);
+		sectiuneDesert.adaugaNod(frappe);
+		
+		meniu.afiseazaInformatii();
+		
 		
 		
 	}
