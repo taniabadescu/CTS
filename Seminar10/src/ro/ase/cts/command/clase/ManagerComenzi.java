@@ -18,7 +18,7 @@ public class ManagerComenzi {
 	}
 	
 	public void executaComanda() {
-		if(comenzi.isEmpty())
+		if(!comenzi.isEmpty())
 		{
 			comenzi.get(0).executa();
 			comenzi.remove(0);
