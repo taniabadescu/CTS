@@ -41,6 +41,60 @@ public class StudentTests {
 	}
 	
 	@Test
+	public void testCalculeazaMedia()
+	{
+		Student student = new Student();
+		student.adaugaNota(5);
+		student.adaugaNota(6);
+		assertEquals(5.5, student.calculeazaMedie(), 0.01);
+	}
+	
+	@Test
+	public void testCalculeazaMediaFaraNote()
+	{
+		Student student = new Student();
+		assertEquals(0, student.calculeazaMedie(), 0.01);
+	}
+	
+	@Test
+	public void testCalculeazaMediaONote()
+	{
+		Student student = new Student();
+		int nota = 8;
+		student.adaugaNota(nota);
+		assertEquals(nota, student.calculeazaMedie(), 0.01);
+	}
+	
+	
+	@Test
+	public void testAdaugaNotaIncorecta()
+	{
+		Student student = new Student();
+		int nota = 12;
+		//1
+		try {
+			//2
+			student.adaugaNota(nota);
+			//3
+			fail("nu trebuia sa ajunga aici. Metooda trebuia sa arunce o exceptie");
+		}catch (IllegalArgumentException err) {
+			// TODO: handle exception
+			//4
+		}
+		//5
+	}
+	
+//	@Test (expected = IllegalArgumentException.class)
+//	public void testAdaugaNotaIncorectaJU4() {
+//		Student student= new Student();
+//		int nota=14;
+//		student.adaugaNota(14);
+//		
+//	}
+
+
+	
+	@Test
 	public void testAreRestante()
 	{
 		Student student = new Student();
