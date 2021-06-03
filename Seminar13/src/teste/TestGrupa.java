@@ -4,7 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import categorii.TesteGetPromovabilitate;
+import categorii.TesteNormale;
+import categorii.TesteUrgente;
 import clase.Grupa;
 import clase.Student;
 
@@ -12,12 +16,14 @@ public class TestGrupa {
 	
 
 	@Test
+	@Category(TesteUrgente.class)
 	public void testConstructorRight() {
 		Grupa grupa = new Grupa(1076);
 		assertEquals(1076, grupa.getNrGrupa());
 	}
 
 	@Test
+	@Category(TesteNormale.class)
 	public void testConstructorBoundaryInf()
 	{
 		Grupa grupa = new Grupa(1000);
@@ -25,6 +31,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(TesteUrgente.class)
 	public void testConstructorBoundarySup()
 	{
 		Grupa grupa = new Grupa(1100);
@@ -57,6 +64,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(TesteGetPromovabilitate.class)
 	public void testPromovabilitateRight() {
 		Grupa grupa = new Grupa(1076);
 		for(int i=0;i<7;i++)
@@ -80,6 +88,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(TesteGetPromovabilitate.class)
 	public void testProbabilitateBoundryInf()
 	{
 		Grupa grupa = new Grupa(1076);

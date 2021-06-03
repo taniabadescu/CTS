@@ -3,7 +3,10 @@ package teste;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import categorii.TesteGetPromovabilitate;
+import categorii.TesteNormale;
 import clase.Grupa;
 import clase.IStudent;
 import dubluri.StudentDummy;
@@ -11,6 +14,7 @@ import dubluri.StudentDummy;
 public class TestGrupaWithDummy {
 
 	@Test
+	@Category(TesteNormale.class)
 	public void testAdaugaStudenti() {
 		IStudent student = new StudentDummy();
 		Grupa grupa = new Grupa(1076);
